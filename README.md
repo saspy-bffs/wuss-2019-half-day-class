@@ -1,0 +1,1 @@
+# wuss-2019-half-day-class
