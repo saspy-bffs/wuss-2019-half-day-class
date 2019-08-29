@@ -1,8 +1,9 @@
 # This modules contains definitions used in Example Files
+from typing import Any
 
 
 def print_with_title(
-        output: str,
+        output: Any,
         title: str = '',
         linebreaks_before: int = 2,
         linebreaks_after: int = 2,
