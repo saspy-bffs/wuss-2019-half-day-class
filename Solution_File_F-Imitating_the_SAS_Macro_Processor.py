@@ -5,7 +5,7 @@
 
 
 ###############################################################################
-# Extra Credit Exercise 4: Imitating the SAS macro processor                  #
+# Exercise 13: Imitating the SAS macro processor                              #
 ###############################################################################
 
 # Lines 12-14 load modules needed for exercises and should be left as-is
@@ -18,13 +18,14 @@ sas = SASsession()
 
 ###############################################################################
 #                                                                             #
-# Extra Credit Example 4. [Python w/ saspy] Imitate the SAS Macro Processor   #
+# Exercise 13. [Python w/ saspy] Imitate the SAS Macro Processor              #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
 ###############################################################################
 
 
+# Original Version
 sas_code_fragment = 'proc means data=sashelp.%s; run;'
 for dsn in ['fish', 'iris']:
     sas_submit_return_value = sas.submit(
@@ -34,6 +35,36 @@ for dsn in ['fish', 'iris']:
     print_with_title(
         sas_submit_return_value['LST'],
         'SAS results from PROC MEANS applies to sashelp.%s:' % dsn
+    )
+
+# Change the SAS procedure used
+for dsn in ['fish', 'iris']:
+    print(f'PROC PRINT applied to sashelp.{dsn}:')
+    print(
+        sas.submit(
+            f'proc print data=sashelp.{dsn}(obs=5); run;',
+            results='TEXT'
+        )['LST']
+    )
+
+# Change the datasets used
+for dsn in ['cars', 'class']:
+    print(f'PROC MEAN applied to sashelp.{dsn}:')
+    print(
+        sas.submit(
+            f'proc means data=sashelp.{dsn}; run;',
+            results='TEXT'
+        )['LST']
+    )
+
+# Print out the SAS logs
+for dsn in ['fish', 'iris']:
+    print(f'PROC MEAN applied to sashelp.{dsn} log:')
+    print(
+        sas.submit(
+            f'proc means data=sashelp.{dsn}; run;',
+            results='TEXT'
+        )['LOG']
     )
 
 
@@ -74,3 +105,9 @@ for dsn in ['fish', 'iris']:
 #      variables (the macro variable i above), so clever tricks like implicitly
 #      defined arrays (macro variable dsn_list above) need to be used together
 #      with functions like %scan to extract a sequence of values.
+#
+# 5. For additional practice, try any or all of the following:
+#    * Change the SAS procedure used.
+#    * Change the datasets used (e.g., a list of all SASHELP datasets is
+#      available at https://support.sas.com/documentation/tools/sashelpug.pdf).
+#    * Print out the SAS logs, rather than procedure output.

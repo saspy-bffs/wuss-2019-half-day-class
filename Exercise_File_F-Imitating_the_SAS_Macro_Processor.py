@@ -5,7 +5,7 @@
 
 
 ###############################################################################
-# Extra Credit Exercise 4: Imitating the SAS macro processor                  #
+# Exercise 13: Imitating the SAS macro processor                              #
 ###############################################################################
 
 # Lines 12-14 load modules needed for exercises and should be left as-is
@@ -18,7 +18,7 @@ sas = SASsession()
 
 ###############################################################################
 #                                                                             #
-# Extra Credit Example 4. [Python w/ saspy] Imitate the SAS Macro Processor   #
+# Exercise 13. [Python w/ saspy] Imitate the SAS Macro Processor              #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
@@ -74,3 +74,9 @@ sas = SASsession()
 #      variables (the macro variable i above), so clever tricks like implicitly
 #      defined arrays (macro variable dsn_list above) need to be used together
 #      with functions like %scan to extract a sequence of values.
+#
+# 5. For additional practice, try any or all of the following:
+#    * Change the SAS procedure used.
+#    * Change the datasets used (e.g., a list of all SASHELP datasets is
+#      available at https://support.sas.com/documentation/tools/sashelpug.pdf).
+#    * Print out the SAS logs, rather than procedure output.

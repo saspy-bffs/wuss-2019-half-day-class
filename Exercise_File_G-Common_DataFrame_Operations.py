@@ -5,7 +5,7 @@
 
 
 ###############################################################################
-# Extra Credit Exercises 5-8: Common DataFrame Operations                     #
+# Exercises 14-17: Common DataFrame Operations                                #
 ###############################################################################
 
 # Lines 12-14 load modules needed for exercises and should be left as-is
@@ -18,7 +18,7 @@ sas = SASsession()
 
 ###############################################################################
 #                                                                             #
-# Extra Credit Example 5. [Python w/ saspy] Adding and dropping columns       #
+# Exercise 14. [Python w/ saspy] Adding and dropping columns                  #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
@@ -70,13 +70,16 @@ sas = SASsession()
 #    create a new column by manipulating the entire DataFrame class_df in
 #    memory, whereas the SAS DATA step requires rows to be loaded from disk and
 #    manipulated individually.
+#
+# 5. For additional practice, use the sas.submit method to execute the SAS
+#    code above, and compare the results.
 
 
 
 
 ###############################################################################
 #                                                                             #
-# Extra Credit Example 6. [Python w/ saspy] Merging DataFrame objects         #
+# Exercise 15. [Python w/ saspy] Merging DataFrame objects                    #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
@@ -132,13 +135,16 @@ sas = SASsession()
 # 4. If you see a message about datasets not existing, a SAS installation
 #    without the product SAS/ETS has been chosen. Should this happen, please
 #    comment out all code for this exercise.
+#
+# 5. For additional practice, use the sas.submit method to execute the SAS
+#    code above, and compare the results.
 
 
 
 
 ###############################################################################
 #                                                                             #
-# Extra Credit Example 7. [Python w/ saspy] Appending DataFrame objects       #
+# Exercise 16. [Python w/ saspy] Appending DataFrame objects                  #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
@@ -209,13 +215,16 @@ sas = SASsession()
 # 5. If you see a message about datasets not existing, a SAS installation
 #    without the product SAS/ETS has been chosen. Should this happen, please
 #    comment out all code for this exercise.
+#
+# 6. For additional practice, use the sas.submit method to execute the SAS
+#    code above, and compare the results.
 
 
 
 
 ###############################################################################
 #                                                                             #
-# Extra Credit Example 8. [Python w/ saspy] Indexing a column in a DataFrame  #
+# Exercise 17. [Python w/ saspy] Indexing a column in a DataFrame             #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
@@ -251,7 +260,7 @@ sas = SASsession()
 #
 # 3. The same outcome could also be achieved with the following SAS code:
 #         proc sql;
-#             create table class(index=(names)) as
+#             create table class(index=(name)) as
 #                 select * from sashelp.class
 #             ;
 #         quit;
@@ -265,3 +274,6 @@ sas = SASsession()
 #    is stored entirely in memory, this allows specific rows to be retrieved
 #    much more efficiently than the SAS DATA step, which requires rows to be
 #    loaded from disk and inspected individually.
+#
+# 4. For additional practice, use the sas.submit method to execute the SAS
+#    code above, and compare the results.

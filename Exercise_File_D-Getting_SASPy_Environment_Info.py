@@ -5,7 +5,7 @@
 
 
 ###############################################################################
-# Extra Credit Exercise 1: Getting SASPy Environment Info                     #
+# Exercise 10: Getting SASPy Environment Info                                 #
 ###############################################################################
 
 # Lines 12-14 load modules needed for exercises and should be left as-is
@@ -18,7 +18,7 @@ sas = SASsession()
 
 ###############################################################################
 #                                                                             #
-# Extra Credit Example 1. [Python w/ saspy] Get info about a SAS session      #
+# Exercise 10. [Python w/ saspy] Get info about a SAS session                 #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
@@ -48,3 +48,9 @@ sas = SASsession()
 #    Python modules available to our Python session, the PRODUCT_STATUS
 #    procedure gives us information about the products available in the SAS
 #    environment we're connected to.
+#
+# 4. For additional practice, try any or all of the following:
+#    * Verify the output from PROC PRODUCT_STATUS is empty.
+#    * Compare the output of PROC PRODUCT_STATUS to PROC SETINIT.
+#    * Refactor the sas.submit call to match Exercise 9, including
+#      triple-quotes (''') around the argument and embedded line breaks.

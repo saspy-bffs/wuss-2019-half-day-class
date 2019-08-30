@@ -5,7 +5,7 @@
 
 
 ###############################################################################
-# Extra Credit Exercises 5-8: Common DataFrame Operations                     #
+# Exercises 14-17: Common DataFrame Operations                                #
 ###############################################################################
 
 # Lines 12-14 load modules needed for exercises and should be left as-is
@@ -18,13 +18,14 @@ sas = SASsession()
 
 ###############################################################################
 #                                                                             #
-# Extra Credit Example 5. [Python w/ saspy] Adding and dropping columns       #
+# Exercise 14. [Python w/ saspy] Adding and dropping columns                  #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
 ###############################################################################
 
 
+# Original Version
 class_df = sas.sasdata2dataframe(table='class', libref='sashelp')
 print_with_title(class_df.head(), 'The first 5 rows of class_df:')
 
@@ -38,6 +39,22 @@ class_df.drop(columns=['Height', 'Weight'], inplace=True)
 print_with_title(
     class_df.head(),
     'The first 5 rows of class_df after a two columns have been dropped:'
+)
+
+# Execute the SAS code equivalent
+print('The results of the SAS code equivalent:')
+print(
+    sas.submit(
+        '''
+            data class(drop = Height Weight);
+                set sashelp.class;
+                BMI = (Weight/Height**2)*703;
+            run;
+            proc print data=class(obs=5);
+            run;
+        ''',
+        results='TEXT'
+    )['LST']
 )
 
 
@@ -70,19 +87,23 @@ print_with_title(
 #    create a new column by manipulating the entire DataFrame class_df in
 #    memory, whereas the SAS DATA step requires rows to be loaded from disk and
 #    manipulated individually.
+#
+# 5. For additional practice, use the sas.submit method to execute the SAS
+#    code above, and compare the results.
 
 
 
 
 ###############################################################################
 #                                                                             #
-# Extra Credit Example 6. [Python w/ saspy] Merging DataFrame objects         #
+# Exercise 15. [Python w/ saspy] Merging DataFrame objects                    #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
 ###############################################################################
 
 
+# Original Version
 steel_df = sas.sasdata2dataframe(table='steel', libref='sashelp')
 print_with_title(steel_df, 'The contents of steel_df')
 
@@ -91,6 +112,30 @@ print_with_title(tourism_df, 'The contents of tourism_df')
 
 merged_df = steel_df.merge(tourism_df,left_on='DATE', right_on='year')
 print_with_title(merged_df, 'The contents of the merged DataFrame')
+
+# Execute the SAS code equivalent
+print('The results of the SAS code equivalent:')
+print(
+    sas.submit(
+        '''
+            proc sql;
+                create table merged as
+                    select
+                         A.*
+                        ,B.*
+                    from
+                        sashelp.steel as A
+                        inner join
+                        sashelp.tourism as B
+                        on A.DATE = B.year
+                ;
+            quit;
+            proc print data=merged;
+            run;
+        ''',
+        results='TEXT'
+    )['LST']
+)
 
 
 # Notes:
@@ -132,19 +177,23 @@ print_with_title(merged_df, 'The contents of the merged DataFrame')
 # 4. If you see a message about datasets not existing, a SAS installation
 #    without the product SAS/ETS has been chosen. Should this happen, please
 #    comment out all code for this exercise.
+#
+# 5. For additional practice, use the sas.submit method to execute the SAS
+#    code above, and compare the results.
 
 
 
 
 ###############################################################################
 #                                                                             #
-# Extra Credit Example 7. [Python w/ saspy] Appending DataFrame objects       #
+# Exercise 16. [Python w/ saspy] Appending DataFrame objects                  #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
 ###############################################################################
 
 
+# Original Version
 countseries_df = sas.sasdata2dataframe(table='countseries', libref='sashelp')
 print_with_title(countseries_df, 'The contents of countseries_df')
 
@@ -159,6 +208,25 @@ print_with_title(rockpit_df, 'rockpit_df with renamed columns')
 
 appended_df = countseries_df.append(rockpit_df)
 print_with_title(appended_df, 'The results of appending the DataFrames')
+
+# Execute the SAS code equivalent
+print('The results of the SAS code equivalent:')
+print(
+    sas.submit(
+        '''
+            proc sql;
+                create table appended as
+                    select Date as Date, Units as Amount from sashelp.countseries
+                    union all corr
+                    select DATE as Date, AMOUNT as Amount from sashelp.rockpit
+                ;
+            quit;
+            proc print data=appended(obs=5);
+            run;
+        ''',
+        results='TEXT'
+    )['LST']
+)
 
 
 # Notes:
@@ -209,19 +277,23 @@ print_with_title(appended_df, 'The results of appending the DataFrames')
 # 5. If you see a message about datasets not existing, a SAS installation
 #    without the product SAS/ETS has been chosen. Should this happen, please
 #    comment out all code for this exercise.
+#
+# 6. For additional practice, use the sas.submit method to execute the SAS
+#    code above, and compare the results.
 
 
 
 
 ###############################################################################
 #                                                                             #
-# Extra Credit Example 8. [Python w/ saspy] Indexing a column in a DataFrame  #
+# Exercise 17. [Python w/ saspy] Indexing a column in a DataFrame             #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
 ###############################################################################
 
 
+# Original Version
 class_df.set_index('Name', inplace=True)
 print_with_title(
     class_df.head(),
@@ -230,6 +302,27 @@ print_with_title(
 print_with_title(
     class_df.loc['Alfred', :],
     'The row corresponding to "Name"="Alfred":'
+)
+
+# Execute the SAS code equivalent
+print('The results of the SAS code equivalent:')
+print(
+    sas.submit(
+        '''
+        proc sql;
+            create table class(index=(name)) as
+                select * from sashelp.class
+            ;
+        quit;
+        data alfreds_row;
+            set class(idxwhere=yes);
+            where name='Alfred';
+        run;
+        proc print data=alfreds_row;
+        run;
+        ''',
+        results='TEXT'
+    )['LST']
 )
 
 
@@ -251,7 +344,7 @@ print_with_title(
 #
 # 3. The same outcome could also be achieved with the following SAS code:
 #         proc sql;
-#             create table class(index=(names)) as
+#             create table class(index=(name)) as
 #                 select * from sashelp.class
 #             ;
 #         quit;
@@ -265,3 +358,6 @@ print_with_title(
 #    is stored entirely in memory, this allows specific rows to be retrieved
 #    much more efficiently than the SAS DATA step, which requires rows to be
 #    loaded from disk and inspected individually.
+#
+# 4. For additional practice, use the sas.submit method to execute the SAS
+#    code above, and compare the results.

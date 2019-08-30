@@ -30,9 +30,9 @@ All development was done under Windows 10 with Python 3.7 and SAS 9.4 locally in
 
 ## Prerequisites
 
-All examples assume a reasonably current version of Python 3 is installed, along with the modules specified in [requirements.txt](requirements.txt).
+All examples assume a reasonably current version of Python 3.7 (or later) is installed, along with the modules specified in [requirements.txt](requirements.txt).
 
-In addition, Example Files C-G require access to installations of Java SE ([https://www.oracle.com/technetwork/java/javase/](https://www.oracle.com/technetwork/java/javase/)) and SAS 9.4 ([https://www.sas.com/en_us/software/sas9.html](https://www.sas.com/en_us/software/sas9.html)), and the instructions in [sascfg_personal-example.py](sascfg_personal-example.py) should be used to create a file called `sascfg_personal.py` in the project directory.
+In addition, Exercise Files C-G require access to installations of Java SE ([https://www.oracle.com/technetwork/java/javase/](https://www.oracle.com/technetwork/java/javase/)) and SAS 9.4 ([https://www.sas.com/en_us/software/sas9.html](https://www.sas.com/en_us/software/sas9.html)), and the instructions in [sascfg_personal-example.py](sascfg_personal-example.py) should be used to create a file called `sascfg_personal.py` in the project directory. Exercise File G also requires access to SAS/ETS ([https://www.sas.com/en_us/software/ets.html](https://www.sas.com/en_us/software/ets.html)).
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
