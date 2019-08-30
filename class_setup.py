@@ -1,4 +1,4 @@
-# This modules contains definitions used in Example Files
+# This modules contains definitions used in Exercise Files
 from typing import Any
 
 

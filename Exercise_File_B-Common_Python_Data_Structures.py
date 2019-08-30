@@ -17,7 +17,7 @@ from pandas import DataFrame
 
 ###############################################################################
 #                                                                             #
-# Example 3. [Python] Define a list object                                    #
+# Exercise 3. [Python] Define a list object                                   #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
@@ -48,7 +48,7 @@ from pandas import DataFrame
 #      customized indexing is only available for more sophisticated data
 #      structures in Python (e.g., a dictionary, as in the next example).
 #
-# 4. For extra credit, try any or all of the following:
+# 4. For additional practice, try any or all of the following:
 #    * Print out the initial element of the list.
 #    * Print out the final element of the list.
 #    * Create a list of length five, and print its middle elements.
@@ -58,7 +58,7 @@ from pandas import DataFrame
 
 ###############################################################################
 #                                                                             #
-# Example 4. [Python] Define a dict object                                    #
+# Exercise 4. [Python] Define a dict object                                   #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
@@ -98,7 +98,7 @@ from pandas import DataFrame
 #    listed when the dictionary is created. However, as of Python 3.7 (released
 #    in June 2018), insertion order is preserved.
 #
-# 5. For extra credit, try any or all of the following:
+# 5. For additional practice, try any or all of the following:
 #    * Print out the list with key 'salutation'.
 #    * Print out the initial element in the list associated with key
 #      'valediction'.
@@ -110,7 +110,7 @@ from pandas import DataFrame
 
 ###############################################################################
 #                                                                             #
-# Example 5. [Python w/ pandas] Define a DataFrame object                     #
+# Exercise 5. [Python w/ pandas] Define a DataFrame object                    #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
@@ -160,8 +160,8 @@ from pandas import DataFrame
 #    constructor function can also accept many other object types, including
 #    another DataFrame.
 #
-# 5. For extra credit, try any or all of the following (keeping in mind that
-#    DataFrames can be indexed like dictionaries):
+# 5. For additional practice, try any or all of the following (keeping in mind
+#    that DataFrames can be indexed like dictionaries):
 #    * Print out the column with key 'salutation'.
 #    * Print out the initial element in the column with key 'valediction'.
 #    * Print out the final element in the column with key 'part of speech'.

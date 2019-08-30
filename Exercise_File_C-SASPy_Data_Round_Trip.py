@@ -5,7 +5,7 @@
 
 
 ###############################################################################
-# Examples 6-9: SASPy Data Round Trip                                         #
+# Exercises 6-9: SASPy Data Round Trip                                        #
 ###############################################################################
 
 # Lines 12-13 load modules needed for exercises and should be left as-is
@@ -17,7 +17,7 @@ from saspy import SASsession
 
 ###############################################################################
 #                                                                             #
-# Example 6. [Python w/ saspy] Connect to a SAS kernel                        #
+# Exercise 6. [Python w/ saspy] Connect to a SAS kernel                       #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
@@ -46,7 +46,7 @@ from saspy import SASsession
 
 ###############################################################################
 #                                                                             #
-# Example 7. [Python w/ pandas & saspy] Load a SAS dataset into a DataFrame   #
+# Exercise 7. [Python w/ pandas & saspy] Load a SAS dataset into a DataFrame  #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
@@ -84,7 +84,7 @@ from saspy import SASsession
 # 3. All subsequent exercises in this file will assume the object fish_df
 #    exists, so please don't comment out the line creating it.
 #
-# 4. For extra credit, try the following:
+# 4. For additional practice, try any or all of the following:
 #    * Pass a numerical parameter to the head method to see a different number
 #      of rows (e.g., fish_df.head(42)).
 #    * Change the head method to tail to see a different part of the dataset.
@@ -97,7 +97,7 @@ from saspy import SASsession
 
 ###############################################################################
 #                                                                             #
-# Example 8. [Python w/ pandas] Manipulate a DataFrame                        #
+# Exercise 8. [Python w/ pandas] Manipulate a DataFrame                       #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
@@ -147,7 +147,7 @@ from saspy import SASsession
 # 3. All subsequent exercises in this file will assume the object fish_df_gsa
 #    exists, so please don't comment out the line(s) creating it.
 #
-# 4. For extra credit, try the following:
+# 4. For additional practice, try any or all of the following:
 #    * Move around and/or remove functions used for aggregation, and see how
 #      the output changes.
 #    * Change the variable whose values are summarized to 'Width'.
@@ -158,8 +158,7 @@ from saspy import SASsession
 
 ###############################################################################
 #                                                                             #
-# Example 9. [Python w/ pandas & saspy] Load a DataFrame into a SAS dataset;  #
-# execute SAS code                                                            #
+# Exercise 9. [Python w/ pandas & saspy] Load a DataFrame into a SAS dataset  #
 #                                                                             #
 # Instructions: Uncomment the code immediately below, and then execute        #
 #                                                                             #
@@ -208,7 +207,7 @@ from saspy import SASsession
 #    be written across multiple lines of code, whereas strings surrounded by
 #    triple quotes (e.g., the argument to the submit method) can.
 #
-# 4. For extra credit, try the following:
+# 4. For additional practice, try any or all of the following:
 #    * Print out the SAS log.
 #    * Change the SAS procedure used to interact with SAS dataset
 #      Work.fish_sds_gsa (e.g., try PROC CONTENTS).
