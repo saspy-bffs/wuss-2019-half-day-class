@@ -305,7 +305,7 @@ print_with_title(
     'The first 5 rows of class_df after a column has been set as an index:'
 )
 print_with_title(
-    class_df.loc['Alfred', :],
+    class_df.loc['Alfred'],
     'The row corresponding to "Name"="Alfred":'
 )
 
@@ -337,17 +337,31 @@ print(
 #    SAS dataset sashelp.class, is used to print the following:
 #    * the first five rows of class_df
 #    * the first five rows of class_df after the column 'Name' has been set as
-#      its index, which eliminates the previously used default numerical index
-#      column and makes querying by student more streamlined
-#    * the row in class_df corresponding to 'Name'='Alfred', which would have
-#      required a more complex operation to first look up the row corresponding
-#      to Alfred if an index hadn't been created
+#      a row index, eliminating the previously used default numerical row index
+#    * the row in class_df corresponding to 'Name'='Alfred'
 #
 # 2. The sas object represents a connection to a SAS session and was created
 #    when a previous cell was run. Here, sas calls its sasdata2dataframe method
 #    to create class_df.
 #
-# 3. The same outcome could also be achieved with the following SAS code:
+# 3. Because an index column was set, the row corresponding to Alfred can be
+#    retrieved directly using an extremely efficient lookup, which is
+#    essentially how Python looks up values in a dictionary by key. (Think
+#    logarithmic time, rather than linear.) Without an index, all rows would
+#    need to be examined individually. A common way to do this is as follows:
+#        class_df[class_df.Name == 'Alfred']
+#    In other words, we'd need to create a "row mask" based on the condition
+#    class_df.Name == 'Alfred', meaning a series of the values True and False,
+#    and then ask for the rows corresponding to the values of True.
+#
+# 4. While index columns make querying a DataFrame faster, there's also a
+#    trade-off. More memory will be needed to maintain the index, and some
+#    operations (e.g., inserting new rows or modifying existing ones) can
+#    become slower. For small DataFrames, there's no reason not to use indexes.
+#    However, for large DataFrames, indexes are best used when we want to query
+#    much more often than we want to change values.
+#
+# 5. The same outcome could also be achieved with the following SAS code:
 #         proc sql;
 #             create table class(index=(name)) as
 #                 select * from sashelp.class
@@ -362,7 +376,10 @@ print(
 #    implicitly querying the values in the index column(s). Since a DataFrame
 #    is stored entirely in memory, this allows specific rows to be retrieved
 #    much more efficiently than the SAS DATA step, which requires rows to be
-#    loaded from disk and inspected individually.
+#    loaded from disk.
 #
-# 4. For additional practice, use the sas.submit method to execute the SAS
+# 6. For additional practice, use the sas.submit method to execute the SAS
 #    code above, and compare the results.
+#
+# 7. If you're interested in learning more about DataFrames, we recommend
+#    https://nbviewer.jupyter.org/github/justmarkham/pandas-videos/tree/master/
