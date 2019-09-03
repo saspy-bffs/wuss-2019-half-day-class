@@ -6,7 +6,7 @@
 
 Materials provided:
 
-- Software [setup instructions](WUSS2019-Class-Everything_Is_Better_With_Friends-setup_instructions.pdf)
+- Software [setup instructions](WUSS2019-Class-Everything_Is_Better_With_Friends-setup_instructions.pdf) and [slides](WUSS2019-Class-Everything_Is_Better_With_Friends-slides.pdf)
 
 - Seven Exercise files:
   * [Exercise_File_A-Getting_Started_with_Python.py](Exercise_File_A-Getting_Started_with_Python.py)
