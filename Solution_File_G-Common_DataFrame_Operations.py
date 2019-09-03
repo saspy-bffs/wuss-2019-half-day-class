@@ -110,7 +110,12 @@ print_with_title(steel_df, 'The contents of steel_df')
 tourism_df = sas.sasdata2dataframe(table='tourism', libref='sashelp')
 print_with_title(tourism_df, 'The contents of tourism_df')
 
-merged_df = steel_df.merge(tourism_df,left_on='DATE', right_on='year')
+merged_df = steel_df.merge(
+    tourism_df,
+    left_on='DATE',
+    right_on='year',
+    how='inner'
+)
 print_with_title(merged_df, 'The contents of the merged DataFrame')
 
 # Execute the SAS code equivalent
