@@ -16,6 +16,7 @@ Materials provided:
   * [Exercise_File_E-SASPy_Convenience_Methods.py](Exercise_File_E-SASPy_Convenience_Methods.py)
   * [Exercise_File_F-Imitating_the_SAS_Macro_Processor.py](Exercise_File_F-Imitating_the_SAS_Macro_Processor.py)
   * [Exercise_File_G-Common_DataFrame_Operations.py](Exercise_File_G-Common_DataFrame_Operations.py)
+  * [Exercise_File_H-Imitating_SAS_Batch_Mode.py](Exercise_File_H-Imitating_SAS_Batch_Mode.py)
 
 - Seven (Possible) Solutions files
   * [Solution_File_A-Getting_Started_with_Python.py](Solution_File_A-Getting_Started_with_Python.py)
@@ -25,6 +26,7 @@ Materials provided:
   * [Solution_File_E-SASPy_Convenience_Methods.py](Solution_File_E-SASPy_Convenience_Methods.py)
   * [Solution_File_F-Imitating_the_SAS_Macro_Processor.py](Solution_File_F-Imitating_the_SAS_Macro_Processor.py)
   * [Solution_File_G-Common_DataFrame_Operations.py](Solution_File_G-Common_DataFrame_Operations.py)
+  * [Solution_File_H-Imitating_SAS_Batch_Mode.py](Solution_File_H-Imitating_SAS_Batch_Mode.py)
 
 All development was done under Windows 10 with Python 3.7 and SAS 9.4 locally installed. Any deviation from this setup might require modifications to example code.
 
@@ -32,7 +34,7 @@ All development was done under Windows 10 with Python 3.7 and SAS 9.4 locally in
 
 All examples assume a reasonably current version of Python 3.7 (or later) is installed, along with the modules specified in [requirements.txt](requirements.txt).
 
-In addition, Exercise Files C-G require access to installations of Java SE ([https://www.oracle.com/technetwork/java/javase/](https://www.oracle.com/technetwork/java/javase/)) and SAS 9.4 ([https://www.sas.com/en_us/software/sas9.html](https://www.sas.com/en_us/software/sas9.html)), and the instructions in [sascfg_personal-example.py](sascfg_personal-example.py) should be used to create a file called `sascfg_personal.py` in the project directory. Exercise File G also requires access to SAS/ETS ([https://www.sas.com/en_us/software/ets.html](https://www.sas.com/en_us/software/ets.html)).
+In addition, Exercise Files C-H require access to installations of Java SE ([https://www.oracle.com/technetwork/java/javase/](https://www.oracle.com/technetwork/java/javase/)) and SAS 9.4 ([https://www.sas.com/en_us/software/sas9.html](https://www.sas.com/en_us/software/sas9.html)), and the instructions in [sascfg_personal-example.py](sascfg_personal-example.py) should be used to create a file called `sascfg_personal.py` in the project directory. Exercise File G also requires access to SAS/ETS ([https://www.sas.com/en_us/software/ets.html](https://www.sas.com/en_us/software/ets.html)).
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
