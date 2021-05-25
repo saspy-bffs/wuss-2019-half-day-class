@@ -2,31 +2,31 @@
 
 # Everything is better with friends: Executing SAS code in Python scripts with SASPy, and turbocharging your SAS programming with open-source tooling
 
-### Materials from a Half-Day Class at [Western Users of SAS Software](https://www.wuss.org/) in Seattle, Washington, on September 4, 2019.
+### Materials from a Half-Day Class at [Western Users of SAS Software](https://wuss19.wuss.org/) in Seattle, Washington, on September 4, 2019.
 
 Materials provided:
 
-- Software [setup instructions](WUSS2019-Class-Everything_Is_Better_With_Friends-setup_instructions.pdf) and [slides](WUSS2019-Class-Everything_Is_Better_With_Friends-slides.pdf)
+- Software [setup instructions](Setup_instructions-WUSS2019-Class-Everything_Is_Better_With_Friends.pdf) and [slides](Slides-WUSS2019-Class-Everything_Is_Better_With_Friends.pdf)
 
 - Seven Exercise files:
-  * [Exercise_File_A-Getting_Started_with_Python.py](Exercise_File_A-Getting_Started_with_Python.py)
-  * [Exercise_File_B-Common_Python_Data_Structures.py](Exercise_File_B-Common_Python_Data_Structures.py)
-  * [Exercise_File_C-SASPy_Data_Round_Trip.py](Exercise_File_C-SASPy_Data_Round_Trip.py)
-  * [Exercise_File_D-Getting_SASPy_Environment_Info.py](Exercise_File_D-Getting_SASPy_Environment_Info.py)
-  * [Exercise_File_E-SASPy_Convenience_Methods.py](Exercise_File_E-SASPy_Convenience_Methods.py)
-  * [Exercise_File_F-Imitating_the_SAS_Macro_Processor.py](Exercise_File_F-Imitating_the_SAS_Macro_Processor.py)
-  * [Exercise_File_G-Common_DataFrame_Operations.py](Exercise_File_G-Common_DataFrame_Operations.py)
-  * [Exercise_File_H-Imitating_SAS_Batch_Mode.py](Exercise_File_H-Imitating_SAS_Batch_Mode.py)
+  * [Exercise_File_A-Getting_Started_with_Python.py](examples/Exercise_File_A-Getting_Started_with_Python.py)
+  * [Exercise_File_B-Common_Python_Data_Structures.py](examples/Exercise_File_B-Common_Python_Data_Structures.py)
+  * [Exercise_File_C-SASPy_Data_Round_Trip.py](examples/Exercise_File_C-SASPy_Data_Round_Trip.py)
+  * [Exercise_File_D-Getting_SASPy_Environment_Info.py](examples/Exercise_File_D-Getting_SASPy_Environment_Info.py)
+  * [Exercise_File_E-SASPy_Convenience_Methods.py](examples/Exercise_File_E-SASPy_Convenience_Methods.py)
+  * [Exercise_File_F-Imitating_the_SAS_Macro_Processor.py](examples/Exercise_File_F-Imitating_the_SAS_Macro_Processor.py)
+  * [Exercise_File_G-Common_DataFrame_Operations.py](examples/Exercise_File_G-Common_DataFrame_Operations.py)
+  * [Exercise_File_H-Imitating_SAS_Batch_Mode.py](examples/Exercise_File_H-Imitating_SAS_Batch_Mode.py)
 
 - Seven (Possible) Solutions files
-  * [Solution_File_A-Getting_Started_with_Python.py](Solution_File_A-Getting_Started_with_Python.py)
-  * [Solution_File_B-Common_Python_Data_Structures.py](Solution_File_B-Common_Python_Data_Structures.py)
-  * [Solution_File_C-SASPy_Data_Round_Trip.py](Solution_File_C-SASPy_Data_Round_Trip.py)
-  * [Solution_File_D-Getting_SASPy_Environment_Info.py](Solution_File_D-Getting_SASPy_Environment_Info.py)
-  * [Solution_File_E-SASPy_Convenience_Methods.py](Solution_File_E-SASPy_Convenience_Methods.py)
-  * [Solution_File_F-Imitating_the_SAS_Macro_Processor.py](Solution_File_F-Imitating_the_SAS_Macro_Processor.py)
-  * [Solution_File_G-Common_DataFrame_Operations.py](Solution_File_G-Common_DataFrame_Operations.py)
-  * [Solution_File_H-Imitating_SAS_Batch_Mode.py](Solution_File_H-Imitating_SAS_Batch_Mode.py)
+  * [Solution_File_A-Getting_Started_with_Python.py](examples/Solution_File_A-Getting_Started_with_Python.py)
+  * [Solution_File_B-Common_Python_Data_Structures.py](examples/Solution_File_B-Common_Python_Data_Structures.py)
+  * [Solution_File_C-SASPy_Data_Round_Trip.py](examples/Solution_File_C-SASPy_Data_Round_Trip.py)
+  * [Solution_File_D-Getting_SASPy_Environment_Info.py](examples/Solution_File_D-Getting_SASPy_Environment_Info.py)
+  * [Solution_File_E-SASPy_Convenience_Methods.py](examples/Solution_File_E-SASPy_Convenience_Methods.py)
+  * [Solution_File_F-Imitating_the_SAS_Macro_Processor.py](examples/Solution_File_F-Imitating_the_SAS_Macro_Processor.py)
+  * [Solution_File_G-Common_DataFrame_Operations.py](examples/Solution_File_G-Common_DataFrame_Operations.py)
+  * [Solution_File_H-Imitating_SAS_Batch_Mode.py](examples/Solution_File_H-Imitating_SAS_Batch_Mode.py)
 
 All development was done under Windows 10 with Python 3.7 and SAS 9.4 locally installed. Any deviation from this setup might require modifications to example code.
 
