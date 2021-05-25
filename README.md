@@ -2,7 +2,7 @@
 
 # Everything is better with friends: Executing SAS code in Python scripts with SASPy, and turbocharging your SAS programming with open-source tooling
 
-### Materials from a Half-Day Class at [Western Users of SAS Software](https://www.wuss.org/) in Seattle, Washington, on September 4, 2019.
+### Materials from a Half-Day Class at [Western Users of SAS Software](https://wuss19.wuss.org/) in Seattle, Washington, on September 4, 2019.
 
 Materials provided:
 
